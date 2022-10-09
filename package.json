@@ -1,0 +1,28 @@
+{
+  "name": "socketio-chat",
+  "version": "1.0.0",
+  "description": "realtime chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chopsqd/socketio-chat.git"
+  },
+  "author": "chopsqd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chopsqd/socketio-chat/issues"
+  },
+  "homepage": "https://github.com/chopsqd/socketio-chat#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "socket.io": "^4.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
