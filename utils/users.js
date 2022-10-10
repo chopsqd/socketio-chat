@@ -3,7 +3,6 @@ const users = []
 // Join user to the chat
 const userJoin = (id, username, room) => {
     const user = {id, username, room}
-
     users.push(user)
 
     return user
@@ -11,10 +10,26 @@ const userJoin = (id, username, room) => {
 
 //Get current user
 const getCurrentUser = id => {
-    return users.find(user => users.id === id)
+    return users.find(user => user.id === id)
+}
+
+// User leaves chat
+const userLeave = id => {
+    const index = users.findIndex(user => user.id === id)
+
+    if(index !== -1) {
+        return users.splice(index, 1)[0]
+    }
+}
+
+// Get room users
+const getRoomUsers = room => {
+    return users.filter(user => user.room === room)
 }
 
 module.exports = {
     userJoin,
-    getCurrentUser
+    getCurrentUser,
+    userLeave,
+    getRoomUsers
 }
